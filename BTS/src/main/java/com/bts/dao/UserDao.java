@@ -23,7 +23,7 @@ public class UserDao {
 	public User loginUser(User user) {
 		// TODO Auto-generated method stub
 		
-		User user1 = userRepository.findById(user.getId()).get();
+		User user1 = userRepository.findById(user.getUsername()).get();
 			
 		return user1;
 	}

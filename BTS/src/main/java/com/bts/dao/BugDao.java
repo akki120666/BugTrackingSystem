@@ -22,12 +22,12 @@ public class BugDao {
 	
 	public List<Bug> findAllBugsByUsername(Bug bug) {
 		// TODO Auto-generated method stub
-		return bugRepository.findAllBugsByUsername(bug);
+		return bugRepository.findAllBugsByUsername(bug.getUsername());
 	}
 	
 	public List<Bug> findAllBugsByUsernameAndStatus(Bug bug) {
 		// TODO Auto-generated method stub
-		return bugRepository.findAllBugsByUsernameAndStatus(bug);
+		return bugRepository.findAllBugsByUsernameAndStatus(bug.getUsername(),bug.getBugStatus());
 	}
 
 

@@ -2,14 +2,17 @@ package com.bts.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.bts.entity.Bug;
 
+@Service
 public interface BugService {
 
-	Bug saveBug(Bug bug);
+	public Bug saveBug(Bug bug);
 
-	List<Bug> findAllBugsByUsernameAndStatus(Bug bug);
+    public List<Bug> findAllBugsByUsernameAndStatus(Bug bug);
 
-	Bug findBugById(int bugId);
+    public Bug findBugById(int bugId);
 
 }

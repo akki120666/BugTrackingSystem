@@ -25,7 +25,7 @@ public class UserController {
 	@RequestMapping(value = "/login")
 	public String loginUser(@RequestBody User user) {
 		
-		return null;
+		return userService.loginUser(user);
 		
 	}
 	

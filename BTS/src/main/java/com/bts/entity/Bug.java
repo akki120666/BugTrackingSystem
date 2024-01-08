@@ -32,11 +32,10 @@ public class Bug {
 	
 	@JoinColumn(name = "username", insertable = false, updatable = false)
 	@ManyToOne(targetEntity = User.class, fetch = FetchType.EAGER)
-	private String username;
-	//private User user;
+	private User user;
 
-	//@Column(name = "username")
-	
+	@Column(name = "username")
+	private String username;
 
 	
 	public String getUsername() {
@@ -47,13 +46,13 @@ public class Bug {
 		this.username = username;
 	}
 
-//	public User getUser() {
-//		return user;
-//	}
-//
-//	public void setUser(User user) {
-//		this.user = user;
-//	}
+	public User getUser() {
+		return user;
+	}
+
+    public void setUser(User user) {
+    	this.user = user;
+	}
 
 	public int getBugId() {
 		return bugId;

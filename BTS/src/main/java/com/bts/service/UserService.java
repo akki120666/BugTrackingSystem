@@ -6,6 +6,6 @@ public interface UserService {
 	
 	public User saveUser(User user);
 
-	String loginUser(User user);
+	public String loginUser(User user);
 
 }

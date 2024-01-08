@@ -30,17 +30,12 @@ public class BugController {
 		return bugService.findAllBugsByUsernameAndStatus(bug);
 	}
 	
-	@GetMapping(value= "/findbugbyid")s
+	@GetMapping(value= "/findbugbyid")
 	public Bug findBugById(@RequestParam int bugId) {
 		return bugService.findBugById(bugId);
 	}
 	
-	@GetMapping(value= "/activebugs")
-	public List<Bug> activeBugs(@RequestParam String bugStatus){
-		
-		return bugService.listOfActiveBugs(bugStatus);
-		
-	}
+	
 	
 	
 	

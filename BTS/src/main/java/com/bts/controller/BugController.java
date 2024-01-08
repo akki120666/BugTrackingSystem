@@ -32,6 +32,7 @@ public class BugController {
 	
 	@GetMapping(value= "/findbugbyid")
 	public Bug findBugById(@RequestParam int bugId) {
+		
 		return bugService.findBugById(bugId);
 	}
 	

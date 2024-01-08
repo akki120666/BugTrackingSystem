@@ -1,7 +1,6 @@
 package com.bts.dao;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,6 +33,12 @@ public class BugDao {
 	public Bug findBugById(int bugId) {
 		// TODO Auto-generated method stub
 		return bugRepository.findById(bugId).get();
+	}
+
+
+	public void deleteBug(int bugId) {
+		// TODO Auto-generated method stub
+		 bugRepository.deleteById(bugId);;;
 	}
 
 

@@ -34,6 +34,12 @@ public class BugServiceImpl implements BugService {
 		return bugDao.findBugById(bugId);
 	}
 
+	@Override
+	public void deleteBug(int bugId) {
+		// TODO Auto-generated method stub
+		 bugDao.deleteBug(bugId);
+	}
+
 	
 
 }

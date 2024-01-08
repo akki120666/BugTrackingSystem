@@ -37,13 +37,19 @@ public class BugController {
 	}
 	
 	
+	@RequestMapping(value="/deletebug")
+	public void deleteBug(@RequestParam int bugId) {
+	
+		 bugService.deleteBug(bugId);	
+		
+	}
 	
 	
-	
+}
 	
 	
 
-}
+
 
 
 

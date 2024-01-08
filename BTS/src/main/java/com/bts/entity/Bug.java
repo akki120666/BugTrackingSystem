@@ -38,6 +38,18 @@ public class Bug {
 	private String username;
 
 	
+    private String assignedTo;
+    
+    private String reportedBy;
+    
+    private String comments;
+    
+    private String title;
+    
+    private String department;
+	
+	
+	
 	public String getUsername() {
 		return username;
 	}
@@ -94,6 +106,46 @@ public class Bug {
 
 	public void setBugCreatedDate(Date bugCreatedDate) {
 		this.bugCreatedDate = bugCreatedDate;
+	}
+
+	public String getAssignedTo() {
+		return assignedTo;
+	}
+
+	public void setAssignedTo(String assignedTo) {
+		this.assignedTo = assignedTo;
+	}
+
+	public String getReportedBy() {
+		return reportedBy;
+	}
+
+	public void setReportedBy(String reportedBy) {
+		this.reportedBy = reportedBy;
+	}
+
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 
 	

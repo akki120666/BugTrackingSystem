@@ -15,4 +15,6 @@ public interface BugService {
 
     public Bug findBugById(int bugId);
 
+	public void deleteBug(int bugId);
+
 }

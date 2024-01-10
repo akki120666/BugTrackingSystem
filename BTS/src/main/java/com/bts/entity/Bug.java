@@ -4,7 +4,6 @@ import java.sql.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -13,16 +12,18 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Bug {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bugId;
 	
 	private String bugCreatedBy;
 	private  String bugStatus;
+	
+	
 	
 	private String bugDescription;
 	
@@ -42,13 +43,10 @@ public class Bug {
     
     private String reportedBy;
     
-    private String comments;
     
     private String title;
     
     private String department;
-	
-	
 	
 	public String getUsername() {
 		return username;
@@ -58,14 +56,7 @@ public class Bug {
 		this.username = username;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-    public void setUser(User user) {
-    	this.user = user;
-	}
-
+	
 	public int getBugId() {
 		return bugId;
 	}
@@ -124,14 +115,6 @@ public class Bug {
 		this.reportedBy = reportedBy;
 	}
 
-	public String getComments() {
-		return comments;
-	}
-
-	public void setComments(String comments) {
-		this.comments = comments;
-	}
-
 	public String getTitle() {
 		return title;
 	}
@@ -146,8 +129,6 @@ public class Bug {
 
 	public void setDepartment(String department) {
 		this.department = department;
-	}
-
-	
+	}	
 
 }

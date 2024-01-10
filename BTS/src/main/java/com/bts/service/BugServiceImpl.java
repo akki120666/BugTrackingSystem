@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.bts.dao.BugDao;
 import com.bts.entity.Bug;
+import com.bts.entity.BugCommnetsWrapper;
+import com.bts.entity.Comments;
 
 @Service
 public class BugServiceImpl implements BugService {
@@ -29,7 +31,7 @@ public class BugServiceImpl implements BugService {
 	}
 
 	@Override
-	public Bug findBugById(int bugId) {
+	public BugCommnetsWrapper findBugById(int bugId) {
 		// TODO Auto-generated method stub
 		return bugDao.findBugById(bugId);
 	}
@@ -38,6 +40,12 @@ public class BugServiceImpl implements BugService {
 	public void deleteBug(int bugId) {
 		// TODO Auto-generated method stub
 		 bugDao.deleteBug(bugId);
+	}
+
+	@Override
+	public Comments saveComments(Comments comments) {
+		// TODO Auto-generated method stub
+		return bugDao.saveComments(comments);
 	}
 
 	

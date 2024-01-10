@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bts.entity.Bug;
+import com.bts.entity.BugCommnetsWrapper;
+import com.bts.entity.Comments;
 import com.bts.service.BugService;
 
 @RestController
@@ -31,7 +33,7 @@ public class BugController {
 	}
 	
 	@GetMapping(value= "/findbugbyid")
-	public Bug findBugById(@RequestParam int bugId) {
+	public BugCommnetsWrapper findBugById(@RequestParam int bugId) {
 		
 		return bugService.findBugById(bugId);
 	}
@@ -43,6 +45,13 @@ public class BugController {
 		 bugService.deleteBug(bugId);	
 		
 	}
+	
+	@RequestMapping(value="/createcomments")
+	public Comments saveComments(@RequestBody Comments comments) {
+		return bugService.saveComments(comments);
+		
+	}
+	
 	
 	
 }

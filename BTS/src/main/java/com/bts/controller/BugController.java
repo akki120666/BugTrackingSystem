@@ -13,11 +13,13 @@ import com.bts.entity.Bug;
 import com.bts.entity.BugCommnetsWrapper;
 import com.bts.entity.Comments;
 import com.bts.service.BugService;
+import com.bts.utill.EmailService;
 
 @RestController
 @RequestMapping(value = "/bugtrackingsystem")
 public class BugController {
-	
+	@Autowired
+	private EmailService  emailService;
 	@Autowired
 	private BugService bugService;
 	
@@ -49,6 +51,12 @@ public class BugController {
 	@RequestMapping(value="/createcomments")
 	public Comments saveComments(@RequestBody Comments comments) {
 		return bugService.saveComments(comments);
+		
+	}
+	
+	@RequestMapping(value="/sendemail")
+	public void sendEmail() {
+		emailService.sendEmail("akshaygoud20@gmail.com", "Bts Reset Password", "Click on the link to reset passwprd www.bugtrackingsystem/resetpassword.com");
 		
 	}
 	
